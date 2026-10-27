@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مبادرة القدرات اللفظية | درّب عقلك وحقق هدفك</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple-900:#3E2465;
+    --purple-700:#5B3A94;
+    --purple-500:#7B4FC9;
+    --purple-100:#EFE6FB;
+    --pink-400:#E983AC;
+    --pink-100:#FCE7F0;
+    --turquoise-500:#1FB6AE;
+    --turquoise-100:#DFF7F5;
+    --gold-500:#DDAA3C;
+    --gold-100:#FBF1DC;
+    --ink:#2A2138;
+    --ink-soft:#6B6178;
+    --bg:#FFFDFB;
+    --card:#FFFFFF;
+    --border:#EDE6F5;
+    --success:#1FA087;
+    --success-bg:#E4F8F3;
+    --danger:#D4547A;
+    --danger-bg:#FCE9EF;
+    --shadow: 0 10px 30px rgba(70,40,120,0.09);
+    --shadow-sm: 0 4px 14px rgba(70,40,120,0.07);
+    --radius-lg: 26px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#221A34;
+      --card:#2B2242;
+      --ink:#F3EEFC;
+      --ink-soft:#C6BBDC;
+      --border:#3B2F57;
+      --purple-100:#3B2F57;
+      --pink-100:#3B2438;
+      --turquoise-100:#1A3A38;
+      --gold-100:#3A311D;
+      --success-bg:#173A31;
+      --danger-bg:#3A2130;
+    }
+    :root:not([data-theme="light"]) .site-header{background:rgba(34,26,52,0.88);}
+  }
+  :root[data-theme="dark"]{
+    --bg:#221A34;
+    --card:#2B2242;
+    --ink:#F3EEFC;
+    --ink-soft:#C6BBDC;
+    --border:#3B2F57;
+    --purple-100:#3B2F57;
+    --pink-100:#3B2438;
+    --turquoise-100:#1A3A38;
+    --gold-100:#3A311D;
+    --success-bg:#173A31;
+    --danger-bg:#3A2130;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Tajawal', sans-serif;
+    line-height:1.7;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Cairo', sans-serif; margin:0; color:var(--ink);}
+  p{margin:0;}
+  button{font-family:inherit; cursor:pointer;}
+  a{color:inherit; text-decoration:none;}
+  img,svg{display:block;}
+  ::selection{background:var(--pink-100);}
+
+  .wrap{max-width:1080px; margin:0 auto; padding:0 20px;}
+
+  /* header */
+  .site-header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,253,251,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  :root[data-theme="dark"] .site-header{background:rgba(34,26,52,0.88);}
+  .header-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 20px;}
+  .brand{display:flex; align-items:center; gap:10px; cursor:pointer;}
+  .brand-badge{
+    width:40px; height:40px; border-radius:12px;
+    background:linear-gradient(135deg, var(--purple-500), var(--pink-400));
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .brand-title{font-family:'Cairo'; font-weight:800; font-size:16px; color:var(--ink);}
+  .brand-sub{font-size:11px; color:var(--ink-soft);}
+  nav.main-nav{display:flex; gap:6px;}
+  .nav-link{
+    padding:9px 16px; border-radius:100px; font-weight:700; font-size:14px;
+    color:var(--ink-soft); transition:background .2s, color .2s;
+  }
+  .nav-link:hover{background:var(--purple-100); color:var(--purple-700);}
+  .nav-link.active{background:var(--purple-700); color:#fff;}
+
+  /* hero */
+  .hero{
+    position:relative;
+    padding:64px 20px 40px;
+    text-align:center;
+    overflow:hidden;
+    background:
+      radial-gradient(600px 300px at 15% 0%, var(--pink-100), transparent 60%),
+      radial-gradient(600px 320px at 90% 10%, var(--turquoise-100), transparent 55%);
+  }
+  .hero-eyebrow-icon{
+    width:76px;height:76px;margin:0 auto 22px;
+    border-radius:24px;
+    background:linear-gradient(145deg, var(--purple-700), var(--pink-400));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow);
+  }
+  .hero h1{
+    font-size:clamp(28px, 4.5vw, 46px);
+    font-weight:900;
+    background:linear-gradient(95deg, var(--purple-700), var(--pink-400) 60%, var(--gold-500));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    line-height:1.35;
+    margin-bottom:14px;
+  }
+  .hero-tagline{
+    max-width:560px; margin:0 auto 30px;
+    color:var(--ink-soft); font-size:16px; font-weight:500;
+  }
+  .cta-btn{
+    display:inline-flex; align-items:center; gap:10px;
+    background:linear-gradient(95deg, var(--purple-700), var(--pink-400));
+    color:#fff; font-family:'Cairo'; font-weight:800; font-size:16px;
+    padding:15px 34px; border-radius:100px; border:none;
+    box-shadow:0 12px 26px rgba(123,79,201,0.35);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .cta-btn:hover{transform:translateY(-2px); box-shadow:0 16px 32px rgba(123,79,201,0.42);}
+  .cta-btn:active{transform:translateY(0);}
+
+  /* journey widget */
+  .journey{
+    max-width:920px; margin:34px auto 0;
+    background:var(--card); border:1px solid var(--border);
+    border-radius:var(--radius-lg); box-shadow:var(--shadow-sm);
+    padding:26px 28px;
+    display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:22px; align-items:center;
+  }
+  .journey-title{font-family:'Cairo'; font-weight:800; font-size:15px; color:var(--purple-700); margin-bottom:6px;}
+  .journey-bar-track{width:100%; height:10px; background:var(--purple-100); border-radius:100px; overflow:hidden;}
+  .journey-bar-fill{height:100%; border-radius:100px; background:linear-gradient(90deg, var(--turquoise-500), var(--purple-500)); transition:width .5s ease;}
+  .journey-stat{text-align:center;}
+  .journey-stat .num{font-family:'Cairo'; font-weight:900; font-size:26px; color:var(--ink);}
+  .journey-stat .lbl{font-size:12.5px; color:var(--ink-soft); font-weight:500;}
+  @media (max-width:720px){ .journey{grid-template-columns:1fr; text-align:center;} }
+
+  /* section grid */
+  .section-title-row{text-align:center; margin:56px 0 26px;}
+  .section-title-row h2{font-size:24px; font-weight:800;}
+  .section-title-row p{color:var(--ink-soft); margin-top:6px; font-size:14.5px;}
+
+  .cards-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:18px;
+    padding-bottom:10px;
+  }
+  @media (max-width:860px){ .cards-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .cards-grid{grid-template-columns:1fr;} }
+
+  .sec-card{
+    background:var(--card); border:1px solid var(--border);
+    border-radius:var(--radius-md); padding:22px;
+    box-shadow:var(--shadow-sm);
+    transition:transform .2s ease, box-shadow .2s ease;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .sec-card:hover{transform:translateY(-4px); box-shadow:var(--shadow);}
+  .sec-icon{
+    width:52px; height:52px; border-radius:16px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .sec-card h3{font-size:17px; font-weight:800;}
+  .sec-card .desc{font-size:13.5px; color:var(--ink-soft); flex-grow:1;}
+  .sec-mini-progress{display:flex; align-items:center; gap:8px;}
+  .sec-mini-track{flex-grow:1; height:6px; border-radius:100px; background:var(--purple-100); overflow:hidden;}
+  .sec-mini-fill{height:100%; border-radius:100px;}
+  .sec-mini-label{font-size:11.5px; color:var(--ink-soft); white-space:nowrap;}
+  .sec-go{
+    align-self:flex-start; font-family:'Cairo'; font-weight:800; font-size:13.5px;
+    color:var(--purple-700); display:flex; align-items:center; gap:4px;
+  }
+
+  .challenge-banner{
+    margin-top:8px;
+    background:linear-gradient(100deg, var(--purple-900), var(--purple-700) 55%, var(--pink-400));
+    border-radius:var(--radius-lg); padding:30px 34px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+    color:#fff; box-shadow:var(--shadow);
+  }
+  .challenge-banner h3{color:#fff; font-size:20px; margin-bottom:6px;}
+  .challenge-banner p{color:rgba(255,255,255,0.82); font-size:14px; max-width:420px;}
+  .challenge-btn{
+    background:#fff; color:var(--purple-700); font-family:'Cairo'; font-weight:800;
+    padding:13px 26px; border-radius:100px; border:none; font-size:14.5px; white-space:nowrap;
+    box-shadow:0 8px 20px rgba(0,0,0,0.18);
+    transition:transform .18s ease;
+  }
+  .challenge-btn:hover{transform:translateY(-2px);}
+  @media (max-width:640px){ .challenge-banner{flex-direction:column; text-align:center;} }
+
+  /* about section on home */
+  .about-teaser{
+    margin:60px auto 0; max-width:760px; text-align:center;
+    background:var(--pink-100); border-radius:var(--radius-lg); padding:34px;
+  }
+  .about-teaser h3{font-size:19px; margin-bottom:10px;}
+  .about-teaser p{color:var(--ink-soft); font-size:14.5px; line-height:1.9;}
+
+  footer.site-footer{
+    margin-top:70px; padding:34px 20px 40px; text-align:center;
+    border-top:1px solid var(--border);
+  }
+  .footer-line{font-size:13.5px; color:var(--ink-soft); margin-bottom:4px;}
+  .footer-strong{font-weight:800; color:var(--ink); font-family:'Cairo';}
+
+  /* ===== Quiz / section views ===== */
+  .quiz-shell{max-width:760px; margin:0 auto; padding:34px 20px 60px;}
+  .quiz-topbar{display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; gap:14px;}
+  .back-link{
+    display:flex; align-items:center; gap:6px; font-weight:700; font-size:14px;
+    color:var(--purple-700); background:var(--purple-100); padding:9px 16px; border-radius:100px;
+  }
+  .quiz-progress-pill{
+    font-family:'Cairo'; font-weight:800; font-size:13.5px; color:var(--ink-soft);
+    background:var(--card); border:1px solid var(--border); padding:8px 16px; border-radius:100px;
+  }
+  .quiz-track{width:100%; height:8px; background:var(--purple-100); border-radius:100px; overflow:hidden; margin-bottom:28px;}
+  .quiz-track-fill{height:100%; background:linear-gradient(90deg, var(--turquoise-500), var(--purple-500)); border-radius:100px; transition:width .35s ease;}
+
+  .passage-box{
+    background:var(--turquoise-100); border-radius:var(--radius-md);
+    padding:22px 24px; margin-bottom:20px; border:1px solid rgba(31,182,174,0.25);
+  }
+  .passage-box .p-label{font-family:'Cairo'; font-weight:800; font-size:13px; color:var(--turquoise-500); margin-bottom:10px;}
+  .passage-box .p-text{font-size:15px; line-height:2; color:var(--ink);}
+  .passage-box .p-text p{margin-bottom:10px;}
+
+  .q-card{
+    background:var(--card); border:1px solid var(--border); border-radius:var(--radius-lg);
+    padding:30px; box-shadow:var(--shadow-sm);
+  }
+  .q-number-badge{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px;height:34px; border-radius:50%; background:var(--purple-700); color:#fff;
+    font-family:'Cairo'; font-weight:800; font-size:14px; margin-bottom:16px;
+  }
+  .q-text{font-size:19px; font-weight:700; font-family:'Cairo'; line-height:1.7; margin-bottom:24px; color:var(--ink);}
+  .options{display:flex; flex-direction:column; gap:12px;}
+  .opt-btn{
+    display:flex; align-items:center; gap:14px; text-align:right;
+    width:100%; padding:15px 18px; border-radius:var(--radius-sm);
+    border:2px solid var(--border); background:var(--bg); font-size:15px; font-weight:500;
+    color:var(--ink); transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .opt-btn:hover:not(:disabled){border-color:var(--purple-500); background:var(--purple-100);}
+  .opt-btn .opt-key{
+    flex-shrink:0; width:28px; height:28px; border-radius:50%; background:var(--purple-100); color:var(--purple-700);
+    display:flex; align-items:center; justify-content:center; font-family:'Cairo'; font-weight:800; font-size:13px;
+  }
+  .opt-btn.selected{border-color:var(--purple-500); background:var(--purple-100);}
+  .opt-btn.correct{border-color:var(--success); background:var(--success-bg);}
+  .opt-btn.correct .opt-key{background:var(--success); color:#fff;}
+  .opt-btn.wrong{border-color:var(--danger); background:var(--danger-bg);}
+  .opt-btn.wrong .opt-key{background:var(--danger); color:#fff;}
+  .opt-btn:disabled{cursor:default;}
+
+  .confirm-row{margin-top:26px; display:flex; justify-content:flex-end;}
+  .confirm-btn{
+    background:var(--purple-700); color:#fff; font-family:'Cairo'; font-weight:800;
+    padding:13px 30px; border-radius:100px; border:none; font-size:14.5px;
+    transition:background .15s ease, transform .15s ease;
+  }
+  .confirm-btn:disabled{background:var(--border); color:var(--ink-soft); cursor:not-allowed;}
+  .confirm-btn:not(:disabled):hover{background:var(--purple-900); transform:translateY(-1px);}
+
+  .feedback-box{
+    margin-top:22px; border-radius:var(--radius-md); padding:20px 22px;
+    animation:pop .25s ease;
+  }
+  @keyframes pop{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+  .feedback-box.ok{background:var(--success-bg); border:1px solid rgba(31,160,135,0.25);}
+  .feedback-box.no{background:var(--danger-bg); border:1px solid rgba(212,84,122,0.25);}
+  .feedback-title{font-family:'Cairo'; font-weight:800; font-size:16.5px; margin-bottom:8px;}
+  .feedback-box.ok .feedback-title{color:var(--success);}
+  .feedback-box.no .feedback-title{color:var(--danger);}
+  .feedback-text{font-size:14.5px; color:var(--ink); line-height:1.85;}
+  .feedback-text b{font-family:'Cairo';}
+
+  .next-row{margin-top:22px; display:flex; justify-content:flex-end;}
+  .next-btn{
+    background:linear-gradient(95deg, var(--purple-700), var(--pink-400));
+    color:#fff; font-family:'Cairo'; font-weight:800; padding:13px 30px; border-radius:100px; border:none; font-size:14.5px;
+  }
+
+  /* completion screen */
+  .complete-shell{max-width:600px; margin:60px auto; padding:0 20px; text-align:center;}
+  .complete-badge{
+    width:96px; height:96px; margin:0 auto 22px; border-radius:50%;
+    background:linear-gradient(145deg, var(--gold-500), var(--pink-400));
+    display:flex; align-items:center; justify-content:center; font-size:44px;
+    box-shadow:var(--shadow);
+  }
+  .complete-shell h2{font-size:24px; margin-bottom:8px;}
+  .complete-shell .sub{color:var(--ink-soft); font-size:15px; margin-bottom:30px;}
+  .score-row{display:flex; gap:14px; justify-content:center; margin-bottom:34px; flex-wrap:wrap;}
+  .score-pill{
+    background:var(--card); border:1px solid var(--border); border-radius:var(--radius-md);
+    padding:18px 26px; min-width:110px; box-shadow:var(--shadow-sm);
+  }
+  .score-pill .n{font-family:'Cairo'; font-weight:900; font-size:24px;}
+  .score-pill .l{font-size:12.5px; color:var(--ink-soft); margin-top:2px;}
+  .complete-actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap;}
+  .ghost-btn{
+    padding:13px 26px; border-radius:100px; border:2px solid var(--purple-500);
+    color:var(--purple-700); font-family:'Cairo'; font-weight:800; font-size:14px; background:transparent;
+  }
+
+  /* about page */
+  .about-shell{max-width:720px; margin:0 auto; padding:50px 20px 70px;}
+  .about-shell h2{font-size:26px; margin-bottom:18px;}
+  .about-shell .lead{font-size:16px; line-height:2; color:var(--ink-soft); margin-bottom:30px;}
+  .about-card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:28px; box-shadow:var(--shadow-sm); margin-bottom:16px;}
+  .about-card h4{font-size:15px; margin-bottom:14px; color:var(--purple-700);}
+  .about-list{display:flex; flex-direction:column; gap:12px;}
+  .about-list .row{display:flex; justify-content:space-between; font-size:14.5px; border-bottom:1px dashed var(--border); padding-bottom:10px;}
+  .about-list .row:last-child{border-bottom:none; padding-bottom:0;}
+  .about-list .row .k{color:var(--ink-soft);}
+  .about-list .row .v{font-weight:700; font-family:'Cairo';}
+
+  .review-note{
+    background:var(--gold-100); border:1px solid rgba(221,170,60,0.3); border-radius:var(--radius-md);
+    padding:16px 18px; font-size:13.5px; color:var(--ink); margin-top:16px;
+  }
+
+  /* ===== section colour theming ===== */
+  .sec-card{position:relative; overflow:hidden;}
+  .sec-actions{display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+  .sec-go-btn{color:#fff; font-family:'Cairo'; font-weight:800; font-size:13.5px; padding:9px 20px; border-radius:100px; cursor:pointer; transition:transform .15s ease, filter .15s ease;}
+  .sec-go-btn:hover{transform:translateY(-2px); filter:brightness(1.07);}
+  .sec-cert{font-family:'Cairo'; font-weight:800; font-size:12.5px; padding:7px 14px; border-radius:100px; border:2px solid; cursor:pointer;}
+  .quiz-shell .back-link{background:var(--sec-soft); color:var(--sec-dark);}
+  .quiz-shell .quiz-progress-pill{background:var(--sec); color:#fff; border-color:var(--sec);}
+  .quiz-shell .quiz-track{background:var(--sec-soft);}
+  .quiz-shell .quiz-track-fill{background:var(--sec);}
+  .quiz-shell .q-card{border-top:8px solid var(--sec); background:linear-gradient(180deg, var(--sec-soft), var(--card) 160px);}
+  .quiz-shell .q-number-badge{background:var(--sec);}
+  .quiz-shell .opt-btn:hover:not(:disabled){border-color:var(--sec); background:var(--sec-soft);}
+  .quiz-shell .opt-btn.selected{border-color:var(--sec); background:var(--sec-soft);}
+  .quiz-shell .opt-btn .opt-key{background:var(--sec-soft); color:var(--sec-dark);}
+  .quiz-shell .opt-btn.selected .opt-key{background:var(--sec); color:#fff;}
+  .quiz-shell .opt-btn.correct .opt-key{background:var(--success); color:#fff;}
+  .quiz-shell .opt-btn.wrong .opt-key{background:var(--danger); color:#fff;}
+  .quiz-shell .confirm-btn:not(:disabled){background:var(--sec);}
+  .quiz-shell .confirm-btn:not(:disabled):hover{background:var(--sec-dark);}
+  .quiz-shell .next-btn{background:linear-gradient(95deg, var(--sec), var(--sec-dark));}
+  .quiz-shell .passage-box{background:var(--sec-soft); border-color:var(--sec);}
+  .quiz-shell .passage-box .p-label{color:var(--sec-dark);}
+  .cert-promo{border:2px dashed; border-radius:var(--radius-md); padding:18px; margin-bottom:26px;}
+
+  /* ===== certificate ===== */
+  .cert-shell{max-width:860px; margin:0 auto; padding:30px 20px 60px;}
+  .cert-tools{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:22px;}
+  .name-input{flex:1; min-width:200px; padding:12px 18px; border-radius:100px; border:2px solid var(--border); background:var(--card); color:var(--ink); font-family:'Tajawal'; font-size:15px;}
+  .name-input:focus{outline:none; border-color:var(--purple-500);}
+  .cert{background:#fff; color:#2A2138; border-radius:26px; padding:14px; background-image:linear-gradient(135deg, var(--sec), var(--sec-dark)); box-shadow:var(--shadow);}
+  .cert-inner{background:#fffdf8; border:3px solid #DDAA3C; border-radius:18px; padding:38px 30px 30px; text-align:center; position:relative;}
+  .cert-ribbon{font-size:46px; margin-bottom:4px;}
+  .cert-kicker{font-family:'Cairo'; font-weight:700; font-size:14px; color:var(--sec-dark);}
+  .cert-title{font-family:'Cairo'; font-weight:900; font-size:clamp(30px,6vw,46px); color:var(--sec-dark); margin:6px 0 14px;}
+  .cert-line{font-size:16px; line-height:2; color:#4a3f5c;}
+  .cert-name{font-family:'Cairo'; font-weight:900; font-size:clamp(24px,5vw,34px); color:#2A2138; border-bottom:3px solid #DDAA3C; display:inline-block; padding:4px 34px; margin:8px 0 12px; min-width:220px;}
+  .cert-date{font-size:13.5px; color:#7a6f8c; margin-top:6px;}
+  .cert-sign{display:flex; justify-content:space-around; gap:20px; margin-top:26px; flex-wrap:wrap;}
+  .sg-k{font-size:12.5px; color:#7a6f8c;}
+  .sg-v{font-family:'Cairo'; font-weight:800; font-size:15px; color:#2A2138;}
+  .cert-school{margin-top:18px; font-family:'Cairo'; font-weight:700; font-size:14px; color:var(--sec-dark);}
+  @media print{
+    .site-header, .no-print, footer.site-footer{display:none !important;}
+    body{background:#fff !important;}
+    .cert-shell{padding:0;}
+    .cert{box-shadow:none; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    @page{size:A4 landscape; margin:10mm;}
+  }
+
+  /* ===== exciting hero ===== */
+  .hero2{position:relative; overflow:hidden; padding:54px 20px 60px; text-align:center; color:#fff;
+    background:radial-gradient(900px 500px at 80% -10%, #E5508F 0%, transparent 55%),
+               radial-gradient(800px 500px at 0% 20%, #12B5A9 0%, transparent 50%),
+               linear-gradient(160deg, #2E1A55 0%, #5B3A94 55%, #7B4FC9 100%);}
+  .hero2::after{content:""; position:absolute; inset:auto 0 0 0; height:70px;
+    background:linear-gradient(to bottom, transparent, var(--bg)); pointer-events:none;}
+  .hero2-inner{position:relative; z-index:2; max-width:920px; margin:0 auto;}
+  .orb{position:absolute; border-radius:50%; filter:blur(50px); opacity:.55; animation:drift 9s ease-in-out infinite;}
+  .o1{width:260px;height:260px;background:#F29C0B; top:-70px; right:6%;}
+  .o2{width:300px;height:300px;background:#3F7BEA; bottom:-110px; left:4%; animation-delay:-3s;}
+  .o3{width:180px;height:180px;background:#E5508F; top:40%; left:38%; animation-delay:-6s; opacity:.35;}
+  @keyframes drift{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(26px,-22px) scale(1.12);}}
+  .fl{position:absolute; z-index:1; font-family:'Cairo'; font-weight:900; color:rgba(255,255,255,.14); animation:floaty 7s ease-in-out infinite; user-select:none;}
+  .l1{font-size:74px; top:8%; right:8%;} .l2{font-size:54px; top:22%; left:9%; animation-delay:-1s;}
+  .l3{font-size:90px; top:58%; right:5%; animation-delay:-2s;} .l4{font-size:48px; top:70%; left:14%; animation-delay:-3s;}
+  .l5{font-size:64px; top:6%; left:30%; animation-delay:-4s;} .l6{font-size:58px; top:48%; left:3%; animation-delay:-5s;}
+  .l7{font-size:46px; top:14%; right:30%; animation-delay:-2.5s;} .l8{font-size:70px; top:76%; right:28%; animation-delay:-1.5s;}
+  @keyframes floaty{0%,100%{transform:translateY(0) rotate(-6deg);}50%{transform:translateY(-22px) rotate(6deg);}}
+  .hero-art{position:relative; width:168px; height:168px; margin:0 auto 18px;}
+  .art-glow{position:absolute; inset:-20px; border-radius:50%; background:radial-gradient(circle, rgba(255,215,106,.55), transparent 65%); animation:glow 3s ease-in-out infinite;}
+  @keyframes glow{0%,100%{transform:scale(.92); opacity:.7;}50%{transform:scale(1.1); opacity:1;}}
+  .art-core{position:absolute; inset:28px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(145deg, #E5508F, #7B4FC9); box-shadow:0 14px 34px rgba(0,0,0,.35), inset 0 0 0 4px rgba(255,255,255,.25); animation:bob 4s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+  .orbit{position:absolute; inset:0; animation:spin 14s linear infinite;}
+  .sat{position:absolute; font-size:26px; width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,.95); display:flex; align-items:center; justify-content:center; box-shadow:0 6px 14px rgba(0,0,0,.25); animation:spin 14s linear infinite reverse;}
+  .s1{top:-8px; left:62px;} .s2{bottom:-8px; left:62px;} .s3{top:62px; left:-10px;} .s4{top:62px; right:-10px;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .hero-chip{display:inline-block; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.35); padding:7px 20px; border-radius:100px; font-family:'Cairo'; font-weight:700; font-size:14px; backdrop-filter:blur(6px); margin-bottom:14px;}
+  .hero2-title{font-family:'Cairo'; font-weight:900; font-size:clamp(38px,8vw,68px); line-height:1.25; color:#fff; text-shadow:0 6px 24px rgba(0,0,0,.28); margin-bottom:14px;}
+  .hero2-title span{background:linear-gradient(95deg,#FFD76A,#FF9EC4); -webkit-background-clip:text; background-clip:text; color:transparent; text-shadow:none;}
+  .hero2-tag{max-width:560px; margin:0 auto 28px; font-size:17px; color:rgba(255,255,255,.9);}
+  .cta-pulse{display:inline-flex; align-items:center; gap:10px; border:none; background:linear-gradient(95deg,#FFD76A,#FFB347); color:#3E2465; font-family:'Cairo'; font-weight:900; font-size:18px; padding:17px 42px; border-radius:100px; box-shadow:0 14px 30px rgba(0,0,0,.3); animation:pulse 2.2s ease-in-out infinite; transition:transform .15s;}
+  .cta-pulse:hover{transform:translateY(-3px) scale(1.03);}
+  @keyframes pulse{0%,100%{box-shadow:0 14px 30px rgba(0,0,0,.3), 0 0 0 0 rgba(255,215,106,.6);}50%{box-shadow:0 14px 30px rgba(0,0,0,.3), 0 0 0 16px rgba(255,215,106,0);}}
+  .journey.glass{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); backdrop-filter:blur(10px); box-shadow:0 12px 34px rgba(0,0,0,.2); margin-top:38px; color:#fff;}
+  .journey.glass .journey-title{color:#fff;}
+  .journey.glass .journey-bar-track{background:rgba(255,255,255,.25);}
+  .journey.glass .journey-bar-fill{background:linear-gradient(90deg,#FFD76A,#FF9EC4);}
+  .journey.glass .journey-stat .num{color:#fff;}
+  .journey.glass .journey-stat .lbl,.journey-hint{color:rgba(255,255,255,.85);}
+  .journey-hint{font-size:12px; margin-top:6px;}
+
+  /* cards */
+  .rise{opacity:0; animation:rise .6s ease forwards;}
+  @keyframes rise{from{opacity:0; transform:translateY(24px);}to{opacity:1; transform:translateY(0);}}
+  .sec-card{transition:transform .25s ease, box-shadow .25s ease;}
+  .sec-card:hover{transform:translateY(-8px) rotate(-.6deg); box-shadow:0 22px 44px rgba(70,40,120,.18);}
+  .sec-num{position:absolute; top:14px; left:18px; font-family:'Cairo'; font-weight:900; font-size:34px; opacity:.22;}
+  .sec-icon{animation:bob 4s ease-in-out infinite;}
+  .shine{position:relative; overflow:hidden;}
+  .shine::after{content:""; position:absolute; top:0; bottom:0; width:90px; left:-120px; background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent); transform:skewX(-20deg); animation:shine 4.5s ease-in-out infinite;}
+  @keyframes shine{0%{left:-120px;}60%,100%{left:110%;}}
+  .section-title-row h2{font-size:30px; background:linear-gradient(95deg,#7B4FC9,#E5508F,#F29C0B); -webkit-background-clip:text; background-clip:text; color:transparent;}
+
+  /* quiz fun */
+  .shake{animation:shake .45s ease;}
+  @keyframes shake{0%,100%{transform:translateX(0);}20%{transform:translateX(-9px);}40%{transform:translateX(9px);}60%{transform:translateX(-6px);}80%{transform:translateX(6px);}}
+  .streak{display:inline-block; margin-right:8px; background:#FFF1D6; color:#C27A00; padding:2px 12px; border-radius:100px; font-size:13px;}
+  .confetti-layer{position:fixed; inset:0; pointer-events:none; z-index:999; overflow:hidden;}
+  .confetti-layer i{position:absolute; top:-14px; width:10px; height:16px; border-radius:2px; animation:conf 1.6s ease-in forwards;}
+  @keyframes conf{to{top:105vh; margin-left:var(--dx); opacity:.9;}}
+  .quiz-shell .opt-btn{transition:transform .15s ease, border-color .15s, background .15s;}
+  .quiz-shell .opt-btn:hover:not(:disabled){transform:translateX(-4px);}
+  .complete-badge{animation:bob 3s ease-in-out infinite;}
+  @media (prefers-reduced-motion:reduce){ *{animation:none !important; transition:none !important;} .rise{opacity:1;} }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand" onclick="go('home')">
+      <div class="brand-badge">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M12 3C8 3 6 6 6 9c0 2 1 3.2 1.6 4.2.5.8.9 1.4.9 2.3v1c0 .8.6 1.5 1.4 1.5h4.2c.8 0 1.4-.7 1.4-1.5v-1c0-.9.4-1.5.9-2.3C16.9 12.2 18 11 18 9c0-3-2-6-6-6Z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M10 21h4M10.5 18.5h3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-title">مبادرة القدرات اللفظية</div>
+        <div class="brand-sub">درّب عقلك وحقق هدفك</div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a class="nav-link" id="nav-home" onclick="go('home')">الرئيسية</a>
+      <a class="nav-link" id="nav-about" onclick="go('about')">عن المبادرة</a>
+    </nav>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<script>
+/* ============================= DATA ============================= */
+const SECTIONS = [
+{
+  id:'analogy', title:'التناظر اللفظي', short:'التناظر',
+  desc:'اكتشفي العلاقة بين زوجين من الكلمات وحددي ما يماثلها.',
+  color:'purple',
+  icon:`<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="7" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><path d="M11 12h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>`,
+  questions:[
+    {q:'مِقوَد – سيارة', options:{'أ':'باب – مقبض','ب':'دفة – سفينة','ج':'سيارة – إشارة','د':'بنك – صرافة'}, answer:'ب', exp:'العلاقة: جزء من كل؛ فالمقود جزء من السيارة، والدفة جزء من السفينة.'},
+    {q:'اجتهاد – نجاح', options:{'أ':'ليل – نهار','ب':'مدرسة – فصل','ج':'مطر – سحاب','د':'ركض – تعب'}, answer:'د', exp:'العلاقة: سبب ونتيجة؛ فالاجتهاد سبب، ونتيجته النجاح، وكذلك الركض نتيجته التعب.'},
+    {q:'بارومتر – الضغط', options:{'أ':'حرارة – ثيرمومتر','ب':'منقلة – قلم','ج':'مشرط – طبيب','د':'بوصلة – اتجاه'}, answer:'د', exp:'العلاقة: آلة ووظيفتها؛ فالبارومتر آلة لقياس الضغط، والبوصلة آلة لتحديد الاتجاه.'},
+    {q:'ابتسام – ضحك', options:{'أ':'ليل – نهار','ب':'دافئ – حار','ج':'خريف – شتاء','د':'مطر – رياح'}, answer:'ب', exp:'العلاقة: التدرج؛ فالابتسامة تتدرج إلى الضحك، وكذلك الماء الدافئ يتدرج حتى يصبح حارًا.'},
+    {q:'مَرسى – سفن', options:{'أ':'محطة – قطارات','ب':'طائرات – مطار','ج':'سيارات – إشارات','د':'نظارة – عين'}, answer:'أ', exp:'العلاقة: مكانية؛ فالمرسى مكان للسفن، والمحطة مكان للقطارات.'},
+    {q:'جنة – نار', options:{'أ':'طائر – مطار','ب':'نحيف – طويل','ج':'إيمان – كفر','د':'سهل – بسيط'}, answer:'ج', exp:'العلاقة: تضاد؛ فالجنة ضد النار، والإيمان ضد الكفر.'},
+    {q:'فرح – سرور', options:{'أ':'قلم – دفتر','ب':'يسر – عسر','ج':'غزير – كثيف','د':'فطِن – ساذج'}, answer:'ج', exp:'العلاقة: ترادف؛ فالفرح مرادفه السرور، والغزير مرادفه الكثيف.'},
+    {q:'نوم – ليل', options:{'أ':'شمس – قمر','ب':'صوم – رمضان','ج':'فجر – ظهر','د':'استيقاظ – عمل'}, answer:'ب', exp:'العلاقة زمانية؛ فالنوم زمنه الليل، والصوم زمنه رمضان.'},
+    {q:'يتيم – وليّ', options:{'أ':'مجتهد – ناجح','ب':'أستاذ – طالب','ج':'صادق – كاذب','د':'رضيع – أم'}, answer:'د', exp:'العلاقة: احتياج؛ فاليتيم يحتاج لوليّ، والرضيع يحتاج إلى أم.'},
+    {q:'قمح – ذرة', options:{'أ':'تين – مشمش','ب':'ليمون – خيار','ج':'تفاح – خيار','د':'موز – خس'}, answer:'أ', exp:'العلاقة: الفئة؛ فالقمح من فئة الذرة، والتين من فئة المشمش.'},
+    {q:'نخل – سَعف', options:{'أ':'جذع – جريدة','ب':'رقاع – ورقة','ج':'بصر – إنسان','د':'رأس – أذن'}, answer:'ب', exp:'العلاقة: الكل من الجزء؛ فالنخل كُلٌّ والسعف جزء منه، والرأس كُلٌّ والأذن جزء منه.'},
+    {q:'محرك – ضجيج', options:{'أ':'ماء – سراب','ب':'مصباح – ضوء','ج':'مطر – سحاب','د':'قلم – دفتر'}, answer:'أ', exp:'العلاقة: المصدر؛ فالمحرك يصدر منه الضجيج، والمصباح يصدر منه الضوء.'},
+    {q:'طفل – كَهل', options:{'أ':'هلال – بدر','ب':'دقيقة – ثانية','ج':'يوم – سنة','د':'رجل – شاب'}, answer:'أ', exp:'العلاقة: مرحلية؛ فالطفل ينتقل بعد ذلك لمرحلة الكهل، والهلال ينتقل لمرحلة البدر.'},
+    {q:'ضوء – نبات', options:{'أ':'شتاء – مطر','ب':'هواء – حياة','ج':'سحابة – ديمة','د':'تجارة – رِبح'}, answer:'ب', exp:'العلاقة: ضرورة؛ فالضوء ضروري للنبات، والهواء ضروري للحياة.'},
+    {q:'فلاح – زراعة', options:{'أ':'صانع – ورشة','ب':'تعليم – المدرس','ج':'تعب – إنتاج','د':'نجار – نجارة'}, answer:'د', exp:'العلاقة: وظيفة؛ فالفلاح وظيفته الزراعة، والنجار وظيفته النجارة.'},
+    {q:'تخدير – عملية', options:{'أ':'رخصة – قيادة','ب':'جرّاح – مشرط','ج':'جندي – سلاح','د':'كتاب – صفحة'}, answer:'أ', exp:'العلاقة: شرطية؛ فالتخدير شرط للعملية، والرخصة شرط للقيادة.'},
+    {q:'أسد – افتراس', options:{'أ':'قط – خائن','ب':'جمل – خضوع','ج':'كلب – وفاء','د':'ذئب – مكر'}, answer:'ج', exp:'العلاقة: الوصف؛ فالكلب وصف بالوفاء، والأسد وصف بالافتراس.'},
+    {q:'حذاء – جلد', options:{'أ':'حديد – سيارة','ب':'طاولة – خشب','ج':'ألومنيوم – كرسي','د':'نسيج – ملابس'}, answer:'ب', exp:'العلاقة: صناعة؛ فالحذاء مصنوع من الجلد، والطاولة مصنوعة من الخشب.'},
+    {q:'خيل – صهيل', options:{'أ':'غراب – نعيق','ب':'ذئب – عواء','ج':'جرس – رنين','د':'سيف – خرير'}, answer:'ب', exp:'العلاقة: أصوات؛ فصوت الخيل هو الصهيل، وصوت الذئب هو العواء.'},
+    {q:'طبل – درداب', options:{'أ':'شخير – نائم','ب':'زئير – أسد','ج':'قلم – حفيف','د':'ضحك – قهقهة'}, answer:'د', exp:'العلاقة: أصوات؛ فصوت الطبل هو درداب، وصوت الضحك هو القهقهة.'},
+    {q:'ملح – حلم', options:{'أ':'بحر – رحب','ب':'قرد – رقد','ج':'قمر – مرق','د':'رقد – قرد'}, answer:'أ', exp:'العلاقة: عكس ترتيب الحروف؛ فكلمة "ملح" لو تعكسها تصير "حلم"، وكلمة "بحر" لو تعكسها تصير "رحب".'},
+    {q:'دجاجة – ديك', options:{'أ':'تيس – ماعزة','ب':'فرس – حصان','ج':'أرنب – عكرمة','د':'كتكوت – دجاجة'}, answer:'ب', exp:'العلاقة: ذكر وأنثى؛ فالدجاجة أنثى الديك، والفرس أنثى الحصان.'}
+  ]
+},
+{
+  id:'complete', title:'إكمال الجمل', short:'إكمال الجمل',
+  desc:'استنبطي الكلمات المناسبة لتكتمل الجملة معنىً وسياقًا.',
+  color:'pink',
+  icon:`<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h9M4 17h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M16 15.5l2.5 2.5L23 13.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  questions:[
+    {q:'لا تكاد التربية الإسلامية تترك أمرًا من أمور الحياة إلا ...... وجعلت للمسلم ...... يرقى إليه؛ لذا كان ...... واضحًا في التربية الإسلامية وأهدافها.', options:{'أ':'هدفًا – الشمول','ب':'معيارًا – الإنصاف','ج':'نصيبًا – العدل','د':'سهمًا – الكمال'}, answer:'أ', exp:'الإجابة "هدفًا – الشمول"؛ فالتربية الإسلامية تشمل أمور الحياة كلها، وقد جعلت للمسلم هدفًا يرقى إليه، لذا كان الشمول واضحًا فيها.'},
+    {q:'هذا المعلم متحدث ......؛ والطلاب يفهمون كلماته و ...... معه.', options:{'أ':'فصيح – يتشاجرون','ب':'ممل – يتفقون','ج':'نشيط – يختلفون','د':'بليغ – ينسجمون'}, answer:'د', exp:'الإجابة "بليغ – ينسجمون"؛ فالمعلم بليغ في حديثه، والطلاب يفهمون كلماته وينسجمون معه، أما "ممل" و"يختلفون" و"يتشاجرون" فلا تناسب السياق.'},
+    {q:'يعاني الاقتصاد العالمي من ......، ولكن توجد مؤشرات على ...... قريبًا.', options:{'أ':'الازدهار – انكماشه','ب':'التقدم – تطوره','ج':'التأخر – ازدهاره','د':'الانكماش – تعافيه'}, answer:'د', exp:'الإجابة "الانكماش – تعافيه"؛ فأداة الاستدراك "لكن" تنقلنا من حال سيئة (الانكماش) إلى مؤشرات على حال أفضل (التعافي).'},
+    {q:'احذر أيها السائق من القيادة ...... سرعة؛ حتى لا ...... أرواح الأبرياء.', options:{'أ':'بأقل – تهدر','ب':'بأقصى – تزهق','ج':'بأدنى – تحفظ','د':'بأكبر – تزيد'}, answer:'ب', exp:'الإجابة "بأقصى – تزهق"؛ فالقيادة بأقصى سرعة تُزهق أرواح الأبرياء، وهذا سبب التحذير.'},
+    {q:'القلوب ...... السرائر، والشفاه أقفالها و ...... مفتاحها.', options:{'أ':'أوعية – الألسن','ب':'محل – المشاعر','ج':'مخزن – الآذان','د':'مستودع – أسئلة'}, answer:'أ', exp:'الإجابة "أوعية – الألسن"؛ فالقلوب أوعية للسرائر، والشفاه أقفالها، والألسن مفتاحها.'},
+    {q:'خير الكلام ما كان ...... يغنيك عن ...... .', options:{'أ':'قليله – قليله','ب':'كثيره – كثيره','ج':'كثيره – قليله','د':'قليله – كثيره'}, answer:'د', exp:'خير الكلام ما كان قليله يغنيك عن كثيره؛ فالكلام القليل المفيد أفضل من الكثير.'},
+    {q:'وجد علماء النفس أن الأطفال ...... عن أحاسيسهم.', options:{'أ':'لعبة – تفرج','ب':'مشاعر – تباع','ج':'تسلية – تنتج','د':'رسوم – تعبر'}, answer:'د', exp:'الإجابة "رسوم – تعبر"؛ فالأطفال يعبّرون عن أحاسيسهم برسومهم.'},
+    {q:'أصبح القصر الأموي في الشام ...... للشعراء الذين يتخذون وسيلة ...... .', options:{'أ':'هدفًا – للتكسب','ب':'مرتعًا – للشهرة','ج':'طاردًا – للثراء','د':'جاذبًا – للمعرفة'}, answer:'أ', exp:'الإجابة "هدفًا – للتكسب"؛ فقد أصبح القصر الأموي هدفًا للشعراء الذين يتخذون الشعر وسيلة للتكسب.'},
+    {q:'لا يستقيم العود ...... إذا كان ...... .', options:{'أ':'طول – مائلًا','ب':'ثبات – منكسرًا','ج':'مائلًا – منكسرًا','د':'ظل – معوجًا'}, answer:'د', exp:'الإجابة "ظل – معوجًا"؛ فلا يستقيم ظل العود إذا كان العود نفسه معوجًا.'},
+    {q:'تعلّم من ...... نظامها، ومن ...... عملها الدؤوب.', options:{'أ':'المدرسة – المعلم','ب':'الأم – البيت','ج':'النملة – الفيل','د':'النملة – النحلة'}, answer:'د', exp:'الإجابة "النملة – النحلة"؛ فالنملة تُعرف بنظامها، والنحلة بعملها الدؤوب.'}
+  ]
+},
+{
+  id:'context', title:'الخطأ السياقي', short:'الخطأ السياقي',
+  desc:'حددي الكلمة التي لا يتناسب معناها مع سياق الجملة.',
+  color:'amber',
+  icon:`<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6" stroke="currentColor" stroke-width="1.7"/><path d="M15 15l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>`,
+  questions:[
+    {q:'جَمِّل نفسك بالخُلُق الحسن، كما تُجمِّل طبعك باللباس الحسن.', options:{'أ':'الخُلُق','ب':'تُجمِّل','ج':'طبعك','د':'باللباس'}, answer:'ج', exp:'الإجابة "طبعك"؛ فالطبع لا يُجمَّل باللباس الحسن.'},
+    {q:'الحلم واسطة فوق الغضب والضعف.', options:{'أ':'الحلم','ب':'واسطة','ج':'فوق','د':'الغضب'}, answer:'ج', exp:'الإجابة "فوق"؛ فالحلم واسطة بين الغضب والضعف.'},
+    {q:'العواصف الرخوة تحطم الأشجار الضخمة، لكنها لا تؤثِّر في العيدان الخضراء التي تنحني لها.', options:{'أ':'الرخوة','ب':'الأشجار','ج':'تؤثِّر','د':'العيدان'}, answer:'أ', exp:'الإجابة "الرخوة"؛ لأن الرخوة تدل على وصف الأرض، أما العواصف فتوصف بالشدة.'},
+    {q:'كلما كان عقلك كبيرًا زاد حُسادك، وكلما كان قلبك كبيرًا زاد أعداؤك.', options:{'أ':'عقلك','ب':'حُسادك','ج':'قلبك','د':'أعداؤك'}, answer:'د', exp:'الإجابة "أعداؤك"؛ فالعقل والقلب بينهما تضاد، أما حسادك وأعداؤك ليس بينهما تضاد، فكلما زادت عاطفة الشخص زاد أصدقاؤه؛ فأعداؤه لا تتناسب.'},
+    {q:'كن جودًا تنعم بمحبة الناس، وإياك والبخل فإنه منقبة الرجال.', options:{'أ':'جودًا','ب':'الناس','ج':'البخل','د':'منقبة'}, answer:'د', exp:'الإجابة "منقبة"؛ "كن" تدل على الأمر، و"إياك" على التحذير، فلابد أن يكون الفراغان متضادين، وكلمة "منقبة" تعني صفة حميدة، فإذا بدأت الجملة بالتحذير فلابد أن يكون المحذَّر منه مذموم.'},
+    {q:'ليست شدة قوة؛ فقوة الخيزران في يبوسته.', options:{'أ':'شدة','ب':'قوة','ج':'الخيزران','د':'يبوسته'}, answer:'د', exp:'الإجابة "يبوسته"؛ فالخيزران صفته المرونة؛ لذا يبوسته لا تتناسب مع السياق.'},
+    {q:'المتفائل يرى فرصة في كل صعوبة، والمتطلع يرى صعوبة في كل فرصة.', options:{'أ':'المتفائل','ب':'يرى','ج':'المتطلع','د':'فرصة'}, answer:'ج', exp:'الإجابة "المتطلع"؛ فالمتشائم هو الذي يرى صعوبة في كل فرصة.'},
+    {q:'المبدع هو من يتفوق في مجال معين ويكتشف أشياء معروفة بين الناس تؤدي إلى شهرته.', options:{'أ':'المبدع','ب':'يتفوق','ج':'معروفة','د':'شهرته'}, answer:'ج', exp:'الإجابة "معروفة"؛ والأصح "مجهولة"؛ فالمبدع يكتشف أشياء مجهولة بين الناس تؤدي إلى شهرته.'},
+    {q:'إن الاستغفار وسيلة للتوبة، وينتج عنه ارتكاب الذنوب.', options:{'أ':'الاستغفار','ب':'وسيلة','ج':'ارتكاب','د':'الذنوب'}, answer:'ج', exp:'الإجابة "ارتكاب"؛ والأصح "غفران الذنوب"؛ فالاستغفار يُغفر به الذنوب.'},
+    {q:'لا يتم عمل والتصارع مفقود، ولا يكون فشل والاتحاد موجود.', options:{'أ':'عمل','ب':'التصارع','ج':'مفقود','د':'الاتحاد'}, answer:'ب', exp:'الإجابة "التصارُع"؛ والأصح "التعاضد".'}
+  ]
+},
+{
+  id:'reading', title:'استيعاب المقروء', short:'استيعاب المقروء',
+  desc:'اقرئي القطعة بعناية، ثم أجيبي عن الأسئلة المرتبطة بها.',
+  color:'teal',
+  icon:`<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 5c-2-1.3-5-1.6-8-1v14c3-.6 6-.3 8 1 2-1.3 5-1.6 8-1V4c-3-.6-6-.3-8 1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 5v14" stroke="currentColor" stroke-width="1.6"/></svg>`,
+  passages:[
+    {
+      title:'القطعة الأولى: الزيت الخام',
+      text:`الزيت الخام داكن اللون، ولكن مصانع التكرير تُصفِّيه فتستخلص منه البنزين الذي تسير به السيارات والطائرات، والكيروسين الذي تضاء به المصابيح المنزلية، والديزل الذي يدير المحركات الضخمة، كما تُستخرج منه مشتقات أخرى كلها ذات فائدة عظيمة.
+إن المملكة العربية السعودية تحتل المركز الأول بين دول العالم من حيث المخزون من الزيت الذي في أراضيها، فعسى أن تكون هذه النعمة عونًا لنا على طاعة الله وخدمة الإسلام وشكر المنعم المتفضل القائل في كتابه العزيز ﴿لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ﴾.`,
+      questions:[
+        {q:'يُستفاد من الفقرة (١) أن الزيت الخام يتم الاستفادة منه بعد:', options:{'أ':'فَصله','ب':'حرقه','ج':'تكريره','د':'خلطه'}, answer:'ج', exp:'لأن الزيت الخام يتم الاستفادة منه بعد تكريره.'},
+        {q:'يُستفاد من الفقرة (١) أن البنزين قبل تصفيته يكون لونه:', options:{'أ':'أبيض','ب':'أحمر','ج':'فاتح اللون','د':'داكن'}, answer:'د', exp:'لأنه مستخلص من الزيت الخام الذي لونه داكن.'},
+        {q:'يُستفاد من الفقرة (٢) أن المملكة تحتل المركز الأول من بين دول:', options:{'أ':'العالم','ب':'الشرق والغرب','ج':'الشرق الأوسط','د':'آسيا'}, answer:'أ', exp:'لأنها تحتل المركز الأول بين الدول من حيث مخزون الزيت بأراضيها.'},
+        {q:'يُستفاد من الفقرة (٢) أن النِّعم تدوم:', options:{'أ':'بالشكر','ب':'بالعمل','ج':'بالصبر','د':'بالإيمان'}, answer:'أ', exp:'لقوله تعالى: ﴿لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ﴾.'}
+      ]
+    },
+    {
+      title:'القطعة الثانية: الصفدي',
+      text:`وُلد الصفدي صلاح الدين خليل أييك سنة ٦٩٦هـ، وكان أدبه من أفضل أساليب الأدب في دهره، لا يلتزم السجع كثيرًا إذا ترجم للرجال، وشعره كثير، وبعضه جيد وأجود، ويُعد في باب التأليف من المكثرين المُجوِّدين، كتب بيده -كما قال- ما يقارب خمسمائة مجلد دخلت في خمسين مصنَّفًا.
+قال: "ولعل الذي كتبته في «ديوان الإنشاء» ضِعف ذلك".
+وتُوفي بالطاعون في دمشق عام ٧٦٤هـ.`,
+      questions:[
+        {q:'تُوفي الصفدي في:', options:{'أ':'العقد السابع من القرن السابع','ب':'العقد السادس من القرن الثامن','ج':'العقد السابع من القرن الثامن','د':'العقد السادس من القرن السابع'}, answer:'ج', exp:'وهو عام ٧٦٤ هـ؛ فالعقد نضيف له واحد فيصير العقد السابع، والقرن نضيف له واحد فيصير القرن الثامن.'},
+        {q:'يفهم من النص أن شعر الصفدي:', options:{'أ':'أكثر متميز وأقله أقل تميزًا','ب':'بعضه متميز وبعضه أكثر تميزًا','ج':'نصفه متميز','د':'أقله متميز'}, answer:'ب', exp:'الإجابة "بعضه متميز وبعضه أكثر تميزًا".'},
+        {q:'نفهم من سياق النص أن كلمة "مجلد" وكلمة "مصنَّفًا":', options:{'أ':'مترادفتان','ب':'المجلد أعم من المصنف','ج':'المجلد قد يحوي أكثر من المصنف','د':'المصنف أعم من المجلد'}, answer:'د', exp:'المصنف أعم من المجلد؛ والسبب (خمسمائة مجلد دخلت في خمسين مصنفًا)، والمجلد هو كراسة تقدر بعشرين ورقة.'},
+        {q:'معنى كلمة "دهره" في سياق النص:', options:{'أ':'عصره','ب':'عالمه','ج':'حياته','د':'ماضيه'}, answer:'أ', exp:'لأنه أصح معنى؛ إذ كان أدبه من أفضل أساليب الأدب في عصره.'},
+        {q:'يرجع الضمير في جملة "شعره ...... وبعضه" إلى:', options:{'أ':'الأول للصفدي والثاني للشعر','ب':'الأول والثاني للشعر','ج':'الأول والثاني للصفدي','د':'الأول للشعر والثاني للصفدي'}, answer:'أ', exp:'(وشعره يرجع للصفدي الشاعر، وبعضه يرجع للشعر، وبعض الشعر جيد وأجود).'},
+        {q:'الذي كتبه الصفدي في ديوان الإنشاء بلغ:', options:{'أ':'١٥٠٠ مجلد','ب':'٢٠٠ مصنف','ج':'٢٠٠ مجلد','د':'١٥٠٠ مصنف'}, answer:'أ', exp:'١٥٠٠ مجلد (خمسمائة مجلد ضِعفًا).'},
+        {q:'عبارة "باب التأليف" تعني:', options:{'أ':'الجمع والتصنيف','ب':'حقل التصنيف','ج':'طرق الشعر والأدب','د':'حقل الشعر والأدب'}, answer:'د', exp:'حقل بمعنى مجال.'},
+        {q:'العنوان الأنسب لهذا النص:', options:{'أ':'تاريخ الصفدي','ب':'حياة الصفدي','ج':'أدب الصفدي "مؤلفاته"','د':'شعر الصفدي'}, answer:'ج', exp:'الإجابة: أدب الصفدي "مؤلفاته"؛ فالنص يتناول أدبه وكثرة ما ألّف.'},
+        {q:'هذا النص يصنف ضمن:', options:{'أ':'علم المكتبات','ب':'تاريخ الأدب','ج':'علم الحاسوب','د':'تاريخ الغزوات'}, answer:'ب', exp:'الإجابة: تاريخ الأدب؛ فالنص يعرّف بأديب ومؤلفاته.'},
+        {q:'عبارة "كتب بيده" معناها كتب:', options:{'أ':'من تآليفه','ب':'من إملائه','ج':'بتوجيه منه','د':'بخط واضح وحسن'}, answer:'أ', exp:'الإجابة: من تأليفه؛ أي كتبها بيده وهي من مؤلفاته.'}
+      ]
+    }
+  ]
+},
+{
+  id:'oddone', title:'الارتباط والاختلاف', short:'الارتباط والاختلاف',
+  desc:'حددي الاختيار الشاذ الذي يختلف عن بقية المجموعة.',
+  color:'blue',
+  icon:`<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="6" cy="6" r="2.6" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="6" r="2.6" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="18" r="2.6" stroke="currentColor" stroke-width="1.6"/><rect x="15" y="15" width="6" height="6" rx="1.4" stroke="currentColor" stroke-width="1.6"/></svg>`,
+  questions:[
+    {q:'رسوب – وفاة – خيانة – نجاح', options:{'أ':'رسوب','ب':'وفاة','ج':'خيانة','د':'نجاح'}, answer:'ب', exp:'لأن الرسوب والخيانة والنجاح تدل على حياة الإنسان.'},
+    {q:'فرن – ثلاجة – مكيف – مروحة', options:{'أ':'فرن','ب':'ثلاجة','ج':'مكيف','د':'مروحة'}, answer:'أ', exp:'لأن "الثلاجة" و"المكيف" و"المروحة" للتبريد، بينما "الفرن" للحرارة.'},
+    {q:'حب – هيام – زواج – عشق', options:{'أ':'حب','ب':'هيام','ج':'زواج','د':'عشق'}, answer:'ج', exp:'لأن الحب والهيام والعشق مشاعر.'},
+    {q:'قام – وقف – نهض – رفع', options:{'أ':'قام','ب':'وقف','ج':'نهض','د':'رفع'}, answer:'د', exp:'لأن "قام" و"وقف" و"نهض" كلها مترادفة.'},
+    {q:'قمر صناعي – سحب – طائرة – نهر', options:{'أ':'قمر صناعي','ب':'سحب','ج':'طائرة','د':'نهر'}, answer:'د', exp:'لأن القمر والسحب والطائرة في السماء.'},
+    {q:'كتاب – قلم – كراسة – دفتر', options:{'أ':'كتاب','ب':'قلم','ج':'كراسة','د':'دفتر'}, answer:'ب', exp:'لأن "كتاب" و"كراسة" و"دفتر" هي نفس المعنى ونفس الشيء، والقلم يستخدم للكتابة.'},
+    {q:'ساعة – ثانية – دقيقة – أسبوع', options:{'أ':'ساعة','ب':'ثانية','ج':'دقيقة','د':'أسبوع'}, answer:'د', exp:'لأن الساعة والثانية والدقيقة ترتبط، والأسبوع يختلف عنها.'},
+    {q:'الربا – البيع – القمار – الرشوة', options:{'أ':'الربا','ب':'البيع','ج':'القمار','د':'الرشوة'}, answer:'ب', exp:'لأن الربا والقمار والرشوة أعمال محرمة بينما البيع عمل حلال.'}
+  ]
+}
+];
+
+const ABOUT_TEXT = `«مبادرة القدرات اللفظية: درّب عقلك وحقق هدفك» مبادرة تعليمية تهدف إلى دعم طالبات المرحلة الثانوية في تنمية مهارات القدرات اللفظية من خلال التدريب والممارسة والتغذية الراجعة الفورية.`;
+
+const CREDITS = {
+  teacher:'أ/ طوعة الناصر',
+  principal:'أ/ سهاد الكشي',
+  school:'مدرسة الثانوية الأولى بالحليلة'
+};
+
+/* flatten helper for reading section + build unified question list for stats/challenge */
+function flatQuestions(section){
+  if(section.id==='reading'){
+    let out=[];
+    section.passages.forEach((p,pi)=>{
+      p.questions.forEach(q=> out.push({...q, passageIndex:pi}));
+    });
+    return out;
+  }
+  return section.questions;
+}
+SECTIONS.forEach(s=> s.total = flatQuestions(s).length);
+const TOTAL_QUESTIONS = SECTIONS.reduce((a,s)=>a+s.total,0);
+
+const COLOR_MAP = {
+  purple:{main:'#7B4FC9', dark:'#5B3A94'},
+  pink:{main:'#E5508F', dark:'#B8336E'},
+  amber:{main:'#F29C0B', dark:'#C27A00'},
+  teal:{main:'#12B5A9', dark:'#0B8A80'},
+  blue:{main:'#3F7BEA', dark:'#2A5CBF'}
+};
+
+/* ============================= PROGRESS ============================= */
+const STORAGE_KEY = 'lafdhi_progress_v1';
+function loadProgress(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(raw) return JSON.parse(raw);
+  }catch(e){}
+  const p = {sections:{}};
+  SECTIONS.forEach(s=> p.sections[s.id] = {solved:0, correct:0, wrong:0});
+  return p;
+}
+function saveProgress(p){
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); }catch(e){}
+}
+let PROGRESS = loadProgress();
+function recordAnswer(sectionId, isCorrect){
+  if(!PROGRESS.sections[sectionId]) PROGRESS.sections[sectionId] = {solved:0,correct:0,wrong:0};
+  const s = PROGRESS.sections[sectionId];
+  s.solved++;
+  if(isCorrect) s.correct++; else s.wrong++;
+  saveProgress(PROGRESS);
+}
+function overallStats(){
+  let solved=0, correct=0;
+  Object.values(PROGRESS.sections).forEach(s=>{ solved+=s.solved; correct+=s.correct; });
+  return {solved, correct, pct: solved? Math.round(correct/solved*100):0};
+}
+
+/* ============================= STATE / ROUTER ============================= */
+let STATE = { view:'home' };
+const app = document.getElementById('app');
+
+function go(view, params={}){
+  STATE = {view, ...params};
+  document.getElementById('nav-home').classList.toggle('active', view==='home');
+  document.getElementById('nav-about').classList.toggle('active', view==='about');
+  render();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function startSection(sectionId){
+  PROGRESS.sections[sectionId]={solved:0,correct:0,wrong:0}; saveProgress(PROGRESS);
+  go('quiz', {sectionId, qIndex:0, mode:'section', selected:null, answered:false, correctCount:0, wrongCount:0});
+}
+
+function shuffleArr(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+
+function startChallenge(){
+  let pool=[];
+  SECTIONS.forEach(s=>{
+    const qs = flatQuestions(s).map(q=>({...q, sectionId:s.id, sectionTitle:s.short}));
+    pool = pool.concat(shuffleArr(qs).slice(0, 4));
+  });
+  pool = shuffleArr(pool);
+  go('quiz', {sectionId:null, mode:'challenge', challengeSet:pool, qIndex:0, selected:null, answered:false, correctCount:0, wrongCount:0});
+}
+
+function confetti(){
+  const colors=['#7B4FC9','#E5508F','#F29C0B','#12B5A9','#3F7BEA','#FFD76A'];
+  const layer=document.createElement('div'); layer.className='confetti-layer';
+  for(let i=0;i<36;i++){
+    const d=document.createElement('i');
+    d.style.left=(Math.random()*100)+'%';
+    d.style.background=colors[i%colors.length];
+    d.style.animationDelay=(Math.random()*0.25)+'s';
+    d.style.animationDuration=(1+Math.random()*0.9)+'s';
+    d.style.setProperty('--dx',(Math.random()*160-80)+'px');
+    d.style.transform='rotate('+(Math.random()*360)+'deg)';
+    layer.appendChild(d);
+  }
+  document.body.appendChild(layer);
+  setTimeout(()=>layer.remove(),2000);
+}
+
+/* ============================= RENDER: HOME ============================= */
+function renderHome(){
+  const stats = overallStats();
+  const pct = TOTAL_QUESTIONS? Math.round(stats.solved/TOTAL_QUESTIONS*100) : 0;
+
+  const cardsHtml = SECTIONS.map((s,i)=>{
+    const cp = PROGRESS.sections[s.id] || {solved:0,correct:0};
+    const pctS = s.total? Math.min(100,Math.round(cp.solved/s.total*100)):0;
+    const c = COLOR_MAP[s.color];
+    const hasCert = PROGRESS.certs && PROGRESS.certs[s.id];
+    return `
+    <div class="sec-card rise" style="animation-delay:${i*90}ms; border-top:7px solid ${c.main}; background:linear-gradient(180deg, ${c.main}1F, var(--card) 55%)">
+      <div class="sec-num" style="color:${c.main}">0${i+1}</div>
+      <div class="sec-icon" style="background:linear-gradient(145deg, ${c.main}, ${c.dark}); color:#fff; box-shadow:0 8px 18px ${c.main}55">${s.icon}</div>
+      <h3 style="color:${c.dark}">${s.title}</h3>
+      <p class="desc">${s.desc}</p>
+      <div class="sec-mini-progress">
+        <div class="sec-mini-track" style="background:${c.main}26"><div class="sec-mini-fill" style="width:${pctS}%; background:${c.main}"></div></div>
+        <div class="sec-mini-label">${cp.solved}/${s.total}</div>
+      </div>
+      <div class="sec-actions">
+        <a class="sec-go-btn" style="background:${c.main}" onclick="startSection('${s.id}')">ابدئي التدريب</a>
+        ${hasCert?`<a class="sec-cert" style="color:${c.dark}; border-color:${c.main}" onclick="go('cert',{sectionId:'${s.id}'})">🏅 شهادتي</a>`:''}
+      </div>
+    </div>`;
+  }).join('');
+
+  app.innerHTML = `
+    <section class="hero2">
+      <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+      <span class="fl l1">ا</span><span class="fl l2">ب</span><span class="fl l3">ت</span><span class="fl l4">ك</span>
+      <span class="fl l5">ل</span><span class="fl l6">م</span><span class="fl l7">ع</span><span class="fl l8">ق</span>
+      <div class="hero2-inner">
+        <div class="hero-art">
+          <div class="art-glow"></div>
+          <div class="orbit">
+            <span class="sat s1">📖</span><span class="sat s2">⭐</span><span class="sat s3">💬</span><span class="sat s4">🎯</span>
+          </div>
+          <div class="art-core">
+            <svg width="62" height="62" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3C8 3 6 6 6 9c0 2 1 3.2 1.6 4.2.5.8.9 1.4.9 2.3v1c0 .8.6 1.5 1.4 1.5h4.2c.8 0 1.4-.7 1.4-1.5v-1c0-.9.4-1.5.9-2.3C16.9 12.2 18 11 18 9c0-3-2-6-6-6Z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M10 21h4M10.5 18.5h3" stroke="#FFD76A" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M12 6v3M10.5 7.5h3" stroke="#FFD76A" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="hero-chip">✨ مبادرة القدرات اللفظية</div>
+        <h1 class="hero2-title">درّب عقلك<br><span>وحقق هدفك</span></h1>
+        <p class="hero2-tag">خمسة أقسام، عشرات الأسئلة، وتغذية راجعة فورية — كل إجابة تقرّبك خطوة من التميز. جاهزة للتحدي؟ 🚀</p>
+        <button class="cta-pulse" onclick="document.getElementById('sections-grid').scrollIntoView({behavior:'smooth'})">
+          ابدئي رحلة القدرات
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M14 6l-6 6 6 6" stroke="#3E2465" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="journey glass">
+          <div>
+            <div class="journey-title">🗺️ رحلتي في القدرات</div>
+            <div class="journey-bar-track"><div class="journey-bar-fill" style="width:${pct}%"></div></div>
+            <div class="journey-hint">${stats.solved} من ${TOTAL_QUESTIONS} سؤالًا</div>
+          </div>
+          <div class="journey-stat"><div class="num">${stats.solved}</div><div class="lbl">سؤال محلول</div></div>
+          <div class="journey-stat"><div class="num">${stats.pct}%</div><div class="lbl">نسبة الإجابات الصحيحة</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="section-title-row" id="sections-grid">
+        <h2>أقسام التدريب</h2>
+        <p>اختاري قسمًا وابدئي التدرّب على أسئلته خطوة بخطوة</p>
+      </div>
+      <div class="cards-grid">${cardsHtml}</div>
+
+      <div class="challenge-banner shine">
+        <div>
+          <h3>تحدي القدرات اللفظية</h3>
+          <p>مجموعة أسئلة من الأقسام الخمسة كلها، بترتيب عشوائي — اختبري نفسك بعد إتمام التدريب.</p>
+        </div>
+        <button class="challenge-btn" onclick="startChallenge()">ابدئي التحدي</button>
+      </div>
+
+      <div class="about-teaser">
+        <h3>عن المبادرة</h3>
+        <p>${ABOUT_TEXT}</p>
+      </div>
+    </div>
+
+    ${footerHtml()}
+  `;
+}
+
+function footerHtml(){
+  return `
+  <footer class="site-footer">
+    <p class="footer-line">إعداد المعلمة: <span class="footer-strong">${CREDITS.teacher}</span></p>
+    <p class="footer-line">مديرة المدرسة: <span class="footer-strong">${CREDITS.principal}</span></p>
+    <p class="footer-line">${CREDITS.school}</p>
+  </footer>`;
+}
+
+/* ============================= RENDER: ABOUT ============================= */
+function renderAbout(){
+  app.innerHTML = `
+    <div class="about-shell">
+      <h2>عن المبادرة</h2>
+      <p class="lead">${ABOUT_TEXT}</p>
+      <div class="about-card">
+        <h4>ماذا نتدرب هنا؟</h4>
+        <p style="font-size:14.5px; color:var(--ink-soft); line-height:1.9;">
+          خمسة أقسام تغطي مهارات القدرات اللفظية: التناظر اللفظي، إكمال الجمل، الخطأ السياقي، استيعاب المقروء، والارتباط والاختلاف — إضافة إلى تحدٍّ شامل يجمع بين الأقسام كلها.
+        </p>
+      </div>
+      <div class="about-card">
+        <h4>بيانات المبادرة</h4>
+        <div class="about-list">
+          <div class="row"><span class="k">إعداد المعلمة</span><span class="v">${CREDITS.teacher}</span></div>
+          <div class="row"><span class="k">مديرة المدرسة</span><span class="v">${CREDITS.principal}</span></div>
+          <div class="row"><span class="k">المدرسة</span><span class="v">${CREDITS.school}</span></div>
+        </div>
+      </div>
+    </div>
+    ${footerHtml()}
+  `;
+}
+
+/* ============================= RENDER: QUIZ ============================= */
+function getCurrentQuestion(){
+  if(STATE.mode==='challenge'){
+    return STATE.challengeSet[STATE.qIndex];
+  }
+  const section = SECTIONS.find(s=>s.id===STATE.sectionId);
+  return flatQuestions(section)[STATE.qIndex];
+}
+function getTotalForView(){
+  return STATE.mode==='challenge' ? STATE.challengeSet.length : SECTIONS.find(s=>s.id===STATE.sectionId).total;
+}
+
+function renderQuiz(){
+  const total = getTotalForView();
+  const q = getCurrentQuestion();
+  const section = STATE.mode==='challenge' ? null : SECTIONS.find(s=>s.id===STATE.sectionId);
+  const progressPct = Math.round((STATE.qIndex)/total*100);
+  const qc = COLOR_MAP[(STATE.mode==='challenge' ? SECTIONS.find(x=>x.id===q.sectionId) : section).color];
+
+  let passageHtml = '';
+  if(STATE.mode==='section' && section.id==='reading'){
+    const p = section.passages[q.passageIndex];
+    passageHtml = `<div class="passage-box"><div class="p-label">${p.title}</div><div class="p-text">${p.text.split('\n').map(t=>`<p>${t}</p>`).join('')}</div></div>`;
+  }
+
+  const badgeLabel = STATE.mode==='challenge'
+    ? `سؤال ${STATE.qIndex+1} من ${total} • ${q.sectionTitle}`
+    : `${section.title} — سؤال ${STATE.qIndex+1} من ${total}`;
+
+  const optionsHtml = Object.entries(q.options).map(([key,text])=>{
+    let cls='opt-btn';
+    let disabled = STATE.answered ? 'disabled' : '';
+    if(STATE.answered){
+      if(key===q.answer) cls+=' correct';
+      else if(key===STATE.selected) cls+=' wrong';
+    } else if(key===STATE.selected){
+      cls+=' selected';
+    }
+    return `<button class="${cls}" ${disabled} onclick="selectOption('${key}')">
+      <span class="opt-key">${key}</span><span>${text}</span>
+    </button>`;
+  }).join('');
+
+  let feedbackHtml = '';
+  if(STATE.answered){
+    const isCorrect = STATE.selected === q.answer;
+    feedbackHtml = `
+      <div class="feedback-box ${isCorrect?'ok':'no'}">
+        <div class="feedback-title">${isCorrect? 'أحسنتِ! إجابة صحيحة 🌟' + ((STATE.streak||0)>=3 ? ' <span class="streak">🔥 '+(STATE.streak)+' إجابات متتالية</span>' : '') : 'حاولي مرة أخرى 💡'}</div>
+        <div class="feedback-text">${ isCorrect ? q.exp : `<b>الإجابة الصحيحة: ${q.answer}) ${q.options[q.answer]}</b><br>${q.exp}` }</div>
+      </div>
+      <div class="next-row">
+        <button class="next-btn" onclick="nextQuestion()">${STATE.qIndex+1 < total ? 'السؤال التالي ←' : 'عرض النتيجة'}</button>
+      </div>
+    `;
+  }
+
+  app.innerHTML = `
+    <div class="quiz-shell" style="--sec:${qc.main}; --sec-dark:${qc.dark}; --sec-soft:${qc.main}1F">
+      <div class="quiz-topbar">
+        <a class="back-link" onclick="go('home')">→ الرئيسية</a>
+        <div class="quiz-progress-pill">${badgeLabel}</div>
+      </div>
+      <div class="quiz-track"><div class="quiz-track-fill" style="width:${progressPct}%"></div></div>
+
+      ${passageHtml}
+
+      <div class="q-card">
+        <div class="q-number-badge">${STATE.qIndex+1}</div>
+        <div class="q-text">${q.q}</div>
+        <div class="options">${optionsHtml}</div>
+        ${!STATE.answered ? `
+          <div class="confirm-row">
+            <button class="confirm-btn" id="confirmBtn" ${STATE.selected? '' : 'disabled'} onclick="confirmAnswer()">تأكيد الإجابة</button>
+          </div>` : ''}
+        ${feedbackHtml}
+      </div>
+    </div>
+  `;
+}
+
+function selectOption(key){
+  if(STATE.answered) return;
+  STATE.selected = key;
+  renderQuiz();
+}
+function confirmAnswer(){
+  if(!STATE.selected || STATE.answered) return;
+  STATE.answered = true;
+  const q = getCurrentQuestion();
+  const isCorrect = STATE.selected === q.answer;
+  if(isCorrect){ STATE.correctCount++; STATE.streak=(STATE.streak||0)+1; } else { STATE.wrongCount++; STATE.streak=0; }
+  if(STATE.mode==='section') recordAnswer(STATE.sectionId, isCorrect);
+
+  renderQuiz();
+  if(isCorrect) confetti(); else { const c=document.querySelector('.q-card'); if(c) c.classList.add('shake'); }
+}
+function nextQuestion(){
+  const total = getTotalForView();
+  if(STATE.qIndex+1 < total){
+    STATE.qIndex++;
+    STATE.selected=null;
+    STATE.answered=false;
+    renderQuiz();
+  } else {
+    go('complete', {mode:STATE.mode, sectionId:STATE.sectionId, correctCount:STATE.correctCount, wrongCount:STATE.wrongCount, total});
+  }
+}
+
+/* ============================= RENDER: COMPLETE ============================= */
+function renderComplete(){
+  const total = STATE.total;
+  const pct = total? Math.round(STATE.correctCount/total*100):0;
+  const isCh = STATE.mode==='challenge';
+  const sec = isCh ? null : SECTIONS.find(s=>s.id===STATE.sectionId);
+  const c = sec ? COLOR_MAP[sec.color] : COLOR_MAP.purple;
+  const title = isCh ? 'تحدي القدرات اللفظية' : sec.title;
+  const perfect = !isCh && STATE.wrongCount===0;
+  if(!isCh){
+    PROGRESS.certs = PROGRESS.certs||{};
+    const prev = PROGRESS.certs[sec.id];
+    const wasPerfect = prev===true || (prev && prev.perfect);
+    PROGRESS.certs[sec.id] = {perfect: perfect||wasPerfect, correct: (perfect||wasPerfect)? total : STATE.correctCount, total};
+    saveProgress(PROGRESS);
+  }
+  const idx = isCh ? -1 : SECTIONS.findIndex(x=>x.id===sec.id);
+  const nextSec = (!isCh && idx < SECTIONS.length-1) ? SECTIONS[idx+1] : null;
+  const nc = nextSec ? COLOR_MAP[nextSec.color] : null;
+  const nextBtn = isCh ? '' : (nextSec
+    ? `<button class="cta-btn" style="background:linear-gradient(95deg, ${nc.main}, ${nc.dark})" onclick="startSection('${nextSec.id}')">تابعي: ${nextSec.title} ←</button>`
+    : `<button class="cta-btn" onclick="startChallenge()">جرّبي تحدي القدرات اللفظية ←</button>`);
+
+  const certBlock = isCh ? '' : `<div class="cert-promo" style="border-color:${c.main}; background:${c.main}1A">
+         <div style="font-family:'Cairo'; font-weight:800; font-size:16px; color:${c.dark}; margin-bottom:6px">${perfect? '🏅 رائع! أنجزتِ القسم دون أي خطأ' : '🎉 شكرًا لإنجازك القسم!'}</div>
+         <div style="font-size:14px; color:var(--ink-soft); margin-bottom:12px">${perfect? 'شهادة شكر وتميز بانتظارك.' : 'شهادة شكر وتقدير بانتظارك — وبقيت أقسام أخرى لتكتشفي فيها قدراتك.'}</div>
+         <button class="cta-btn" style="background:linear-gradient(95deg, ${c.main}, ${c.dark})" onclick="go('cert',{sectionId:'${sec.id}'})">احصلي على شهادة الشكر</button>
+       </div>`;
+
+  app.innerHTML = `
+    <div class="complete-shell">
+      <div class="complete-badge" style="background:linear-gradient(145deg, ${c.main}, ${c.dark})">${perfect?'🏅':'🌟'}</div>
+      <h2 style="color:${c.dark}">أحسنتِ! لقد أتممتِ ${isCh?'':'قسم '}${title}</h2>
+      <p class="sub">استمري في التدرب، فكل محاولة تقرّبك من الإتقان.</p>
+      <div class="score-row">
+        <div class="score-pill"><div class="n" style="color:${c.dark}">${total}</div><div class="l">إجمالي الأسئلة</div></div>
+        <div class="score-pill"><div class="n" style="color:var(--success)">${STATE.correctCount}</div><div class="l">إجابات صحيحة</div></div>
+        <div class="score-pill"><div class="n" style="color:var(--danger)">${STATE.wrongCount}</div><div class="l">إجابات غير صحيحة</div></div>
+        <div class="score-pill"><div class="n" style="color:var(--gold-500)">${pct}%</div><div class="l">نسبة الإنجاز</div></div>
+      </div>
+      ${certBlock}
+      <div class="complete-actions">
+        ${isCh
+          ? `<button class="cta-btn" onclick="startChallenge()">إعادة التحدي</button>`
+          : nextBtn + `<button class="ghost-btn" onclick="startSection('${STATE.sectionId}')">إعادة القسم</button>`}
+        <button class="ghost-btn" onclick="go('home')">العودة للرئيسية</button>
+      </div>
+    </div>
+    ${footerHtml()}
+  `;
+}
+
+/* ============================= RENDER: CERTIFICATE ============================= */
+function setCertName(v){
+  try{ localStorage.setItem('lafdhi_name', v); }catch(e){}
+  const el=document.getElementById('certName'); if(el) el.textContent = v.trim() || 'اسم الطالبة';
+}
+function renderCert(){
+  const s = SECTIONS.find(x=>x.id===STATE.sectionId);
+  if(!(PROGRESS.certs && PROGRESS.certs[s.id])){ go('home'); return; }
+  const c = COLOR_MAP[s.color];
+  const cd = PROGRESS.certs[s.id]; const perfect = cd===true || (cd && cd.perfect); const got = (cd && cd.correct!==undefined) ? cd.correct : s.total;
+  const si = SECTIONS.findIndex(x=>x.id===s.id); const ns = SECTIONS[si+1];
+  const nsc = ns? COLOR_MAP[ns.color] : null;
+  let name=''; try{ name = localStorage.getItem('lafdhi_name')||''; }catch(e){}
+  const safe = name.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+  const date = new Date().toLocaleDateString('ar-SA',{year:'numeric',month:'long',day:'numeric'});
+  app.innerHTML = `
+    <div class="cert-shell">
+      <div class="no-print cert-tools">
+        <a class="back-link" onclick="go('home')">→ الرئيسية</a>
+        <input class="name-input" placeholder="اكتبي اسمك هنا" value="${safe}" oninput="setCertName(this.value)">
+        <button class="cta-btn" style="padding:11px 24px; font-size:14px; background:linear-gradient(95deg, ${c.main}, ${c.dark})" onclick="window.print()">طباعة / حفظ PDF</button>
+        ${ns? `<button class="cta-btn" style="padding:11px 24px; font-size:14px; background:linear-gradient(95deg, ${nsc.main}, ${nsc.dark})" onclick="startSection('${ns.id}')">تابعي: ${ns.title} ←</button>` : `<button class="cta-btn" style="padding:11px 24px; font-size:14px" onclick="startChallenge()">ابدئي التحدي ←</button>`}
+      </div>
+      <div class="cert" style="--sec:${c.main}; --sec-dark:${c.dark}">
+        <div class="cert-inner">
+          <div class="cert-ribbon">🏅</div>
+          <div class="cert-kicker">مبادرة القدرات اللفظية «درّب عقلك وحقق هدفك»</div>
+          <h2 class="cert-title">${perfect? 'شهادة شكر وتميز' : 'شهادة شكر وتقدير'}</h2>
+          <p class="cert-line">تتقدم مبادرة القدرات اللفظية بالشكر والتقدير للطالبة</p>
+          <div class="cert-name" id="certName">${name.trim()? safe : 'اسم الطالبة'}</div>
+          <p class="cert-line">على إتمامها قسم <b>${s.title}</b> ${perfect? 'بنجاح ودون أي أخطاء' : 'بجد واجتهاد'}<br>(${got} من ${s.total} إجابة صحيحة)<br>ونتطلع إلى مواصلتها التميز في بقية الأقسام</p>
+          <p class="cert-date">${date}</p>
+          <div class="cert-sign">
+            <div><div class="sg-k">إعداد المعلمة</div><div class="sg-v">${CREDITS.teacher}</div></div>
+            <div><div class="sg-k">مديرة المدرسة</div><div class="sg-v">${CREDITS.principal}</div></div>
+          </div>
+          <div class="cert-school">${CREDITS.school}</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+/* ============================= MAIN RENDER ============================= */
+function render(){
+  if(STATE.view==='home') renderHome();
+  else if(STATE.view==='about') renderAbout();
+  else if(STATE.view==='quiz') renderQuiz();
+  else if(STATE.view==='complete') renderComplete();
+  else if(STATE.view==='cert') renderCert();
+}
+
+go('home');
+</script>
+</body>
+</html>
